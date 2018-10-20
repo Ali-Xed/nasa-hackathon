@@ -13,6 +13,22 @@ import SafariServices
 import APTimeZones
 import MapKit
 
+extension UIImage {
+    
+    func imageResize (sizeChange:CGSize)-> UIImage{
+        
+        let hasAlpha = true
+        let scale: CGFloat = 0.0 // Use scale factor of main screen
+        
+        UIGraphicsBeginImageContextWithOptions(sizeChange, !hasAlpha, scale)
+        self.draw(in: CGRect(origin: CGPoint.zero, size: sizeChange))
+        
+        let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
+        return scaledImage!
+    }
+    
+}
+
 class WeatherDetailViewController: UIViewController {
     
     static func instantiateFromStoryBoard(withTitle title: String, weatherDTO: WeatherInformationDTO) -> WeatherDetailViewController {
@@ -90,9 +106,31 @@ class WeatherDetailViewController: UIViewController {
         super.viewDidLoad()
         
         navigationItem.title = titleString
+        
+        var facebookImage    = UIImage(named: "Facebook")!
+        var twitterImage  = UIImage(named: "Twitter")!
+        facebookImage = facebookImage.imageResize(sizeChange: CGSize(width: 24, height: 24))
+        twitterImage = twitterImage.imageResize(sizeChange: CGSize(width: 24, height: 24))
+        
+        let facebookButton   = UIBarButtonItem(image: facebookImage,  style: .plain, target: self, action: #selector(WeatherDetailViewController.didTapFacebookButton(_:)))
+        let twitterButton = UIBarButtonItem(image: twitterImage,  style: .plain, target: self, action: #selector(WeatherDetailViewController.didTapTwitterButton(_:)))
+        
+        navigationItem.rightBarButtonItems = [facebookButton, twitterButton]
         mapView.delegate = self
         
         configureMap()
+    }
+    
+    @IBAction func didTapFacebookButton(_ sender: UIBarButtonItem) {
+        let alert = UIAlertController(title: "Climate App", message: "You are going to share this page with Facebook", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func didTapTwitterButton(_ sender: UIBarButtonItem) {
+        let alert = UIAlertController(title: "Climate App", message: "You are going to share this page with Twitter", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
