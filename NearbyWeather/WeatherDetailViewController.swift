@@ -38,12 +38,15 @@ class WeatherDetailViewController: UIViewController {
     @IBOutlet weak var timeLabel: UILabel!
     
     @IBOutlet weak var daytimeStackView: UIStackView!
-    @IBOutlet weak var sunriseImageView: UIImageView!
-    @IBOutlet weak var sunriseNoteLabel: UILabel!
-    @IBOutlet weak var sunriseLabel: UILabel!
-    @IBOutlet weak var sunsetImageView: UIImageView!
-    @IBOutlet weak var sunsetNoteLabel: UILabel!
-    @IBOutlet weak var sunsetLabel: UILabel!
+    
+    @IBOutlet weak var agreeBtn: UIButton!
+    @IBOutlet weak var disagreeBtn: UIButton!
+//    @IBOutlet weak var sunriseImageView: UIImageView!
+//    @IBOutlet weak var sunriseNoteLabel: UILabel!
+//    @IBOutlet weak var sunriseLabel: UILabel!
+//    @IBOutlet weak var sunsetImageView: UIImageView!
+//    @IBOutlet weak var sunsetNoteLabel: UILabel!
+//    @IBOutlet weak var sunsetLabel: UILabel!
     
     @IBOutlet weak var cloudCoverImageView: UIImageView!
     @IBOutlet weak var cloudCoverNoteLabel: UILabel!
@@ -102,6 +105,22 @@ class WeatherDetailViewController: UIViewController {
         
         separatorLineHeightConstraints.forEach { $0.constant = 1/UIScreen.main.scale }
         
+        agreeBtn.setTitle("AGREE", for: .normal)
+        agreeBtn.setTitleColor(.nearbyWeatherStandard, for: .normal)
+        agreeBtn.setTitleColor(.nearbyWeatherStandard, for: .highlighted)
+        agreeBtn.setTitleColor(.lightGray, for: .disabled)
+        agreeBtn.layer.cornerRadius = 5.0
+        agreeBtn.layer.borderColor = UIColor.nearbyWeatherStandard.cgColor
+        agreeBtn.layer.borderWidth = 1.0
+        
+        disagreeBtn.setTitle("DISAGREE", for: .normal)
+        disagreeBtn.setTitleColor(.nearbyWeatherStandard, for: .normal)
+        disagreeBtn.setTitleColor(.nearbyWeatherStandard, for: .highlighted)
+        disagreeBtn.setTitleColor(.lightGray, for: .disabled)
+        disagreeBtn.layer.cornerRadius = 5.0
+        disagreeBtn.layer.borderColor = UIColor.nearbyWeatherStandard.cgColor
+        disagreeBtn.layer.borderWidth = 1.0
+        
         let weatherCode = weatherDTO.weatherCondition[0].identifier
         conditionSymbolLabel.text = ConversionService.weatherConditionSymbol(fromWeathercode: weatherCode)
         conditionNameLabel.text = weatherDTO.weatherCondition.first?.conditionName
@@ -127,15 +146,15 @@ class WeatherDetailViewController: UIViewController {
             let localTime = dateFormatter.string(from: Date())
             timeLabel.text = "\(description), \(localTime)"
             
-            sunriseImageView.tintColor = .darkGray
-            sunriseNoteLabel.text = "\(R.string.localizable.sunrise()):"
-            sunriseLabel.text = dateFormatter.string(from: sunriseDate)
-            
-            sunsetImageView.tintColor = .darkGray
-            sunsetNoteLabel.text = "\(R.string.localizable.sunset()):"
-            sunsetLabel.text = dateFormatter.string(from: sunsetDate)
+//            sunriseImageView.tintColor = .darkGray
+//            sunriseNoteLabel.text = "\(R.string.localizable.sunrise()):"
+//            sunriseLabel.text = dateFormatter.string(from: sunriseDate)
+//
+//            sunsetImageView.tintColor = .darkGray
+//            sunsetNoteLabel.text = "\(R.string.localizable.sunset()):"
+//            sunsetLabel.text = dateFormatter.string(from: sunsetDate)
         } else {
-            daytimeStackView.isHidden = true
+            //daytimeStackView.isHidden = true
             timeLabel.isHidden = true
         }
         
