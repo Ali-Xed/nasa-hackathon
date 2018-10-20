@@ -133,7 +133,7 @@ class NearbyLocationsMapViewController: UIViewController {
     
     private func focusMapOnUserLocation() {
         if LocationService.shared.locationPermissionsGranted, let currentLocation = LocationService.shared.currentLocation {
-            let region = MKCoordinateRegionMakeWithDistance(currentLocation.coordinate, 15000, 15000)
+            let region = MKCoordinateRegionMakeWithDistance(currentLocation.coordinate, 3000, 3000)
             mapView.setRegion(region, animated: true)
         }
     }
@@ -143,7 +143,7 @@ class NearbyLocationsMapViewController: UIViewController {
             return
         }
         let coordinate = CLLocationCoordinate2D(latitude: selectedLocation.coordinates.latitude, longitude: selectedLocation.coordinates.longitude)
-        let region = MKCoordinateRegionMakeWithDistance(coordinate, 15000, 15000)
+        let region = MKCoordinateRegionMakeWithDistance(coordinate, 3000, 3000)
         mapView.setRegion(region, animated: true)
     }
     

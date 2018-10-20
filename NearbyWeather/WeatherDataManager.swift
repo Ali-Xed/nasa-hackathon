@@ -28,8 +28,7 @@ struct BulkWeatherDataContainer: Codable {
     var errorDataDTO: ErrorDataDTO?
     var weatherInformationDTOs: [WeatherInformationDTO]?
 }
-
-let kDefaultBookmarkedLocation = WeatherStationDTO(identifier: 5341145, name: "Cupertino", country: "US", coordinates: Coordinates(latitude: 37.323002, longitude: -122.032181))
+let kDefaultBookmarkedLocation = WeatherStationDTO(identifier: 2147714, name: "Sydney", country: "AU", coordinates: Coordinates(latitude: -33.847927, longitude: 150.6517792))
 
 fileprivate let kWeatherDataManagerStoredContentsFileName = "WeatherDataManagerStoredContents"
 

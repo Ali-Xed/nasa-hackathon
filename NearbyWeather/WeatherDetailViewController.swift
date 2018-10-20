@@ -188,7 +188,7 @@ class WeatherDetailViewController: UIViewController {
         }
         
         let location = CLLocation(latitude: weatherDTO.coordinates.latitude, longitude: weatherDTO.coordinates.longitude)
-        let region = MKCoordinateRegionMakeWithDistance(location.coordinate, 5000, 5000)
+        let region = MKCoordinateRegionMakeWithDistance(location.coordinate, 3000, 3000)
         mapView.setRegion(region, animated: false)
     }
     
