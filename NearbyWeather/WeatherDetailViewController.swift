@@ -49,6 +49,7 @@ class WeatherDetailViewController: UIViewController {
     /* Outlets */
     
     @IBOutlet weak var conditionSymbolLabel: UILabel!
+    @IBOutlet weak var newConditionSymbolLabel: UILabel!
     @IBOutlet weak var conditionNameLabel: UILabel!
     @IBOutlet weak var conditionDescriptionLabel: UILabel!
     @IBOutlet weak var temperatureLabel: UILabel!
@@ -167,6 +168,16 @@ class WeatherDetailViewController: UIViewController {
         
         let weatherCode = weatherDTO.weatherCondition[0].identifier
         conditionSymbolLabel.text = ConversionService.weatherConditionSymbol(fromWeathercode: weatherCode)
+        var newWeatherCode = 800
+        if weatherCode != 800 {
+            newWeatherCode = 800
+        }
+        else
+        {
+            newWeatherCode = 801
+        }
+        
+        newConditionSymbolLabel.text = ConversionService.weatherConditionSymbol(fromWeathercode: newWeatherCode)
         conditionNameLabel.text = weatherDTO.weatherCondition.first?.conditionName
         conditionDescriptionLabel.text = weatherDTO.weatherCondition.first?.conditionDescription.capitalized
         let temperatureUnit = PreferencesManager.shared.temperatureUnit
