@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Charts
 import MapKit
 import SafariServices
 import APTimeZones
@@ -41,6 +42,12 @@ class WeatherDetailViewController: UIViewController {
     
     @IBOutlet weak var agreeBtn: UIButton!
     @IBOutlet weak var disagreeBtn: UIButton!
+    @IBOutlet weak var humidChart: LineChartView!
+    @IBOutlet weak var pressureChart: LineChartView!
+    
+    var humidData : [Double] = [89.5, 74.2, 54.6, 67.7, 82.4, 38.6, 41.5, 48.0, 63.3, 54.7]
+    var pressureData : [Double] = [1010.2, 1015.3, 1014.2, 1018.3, 1016.3, 1008.2, 1002.1, 1016.3, 967.9, 1008.2]
+    
 //    @IBOutlet weak var sunriseImageView: UIImageView!
 //    @IBOutlet weak var sunriseNoteLabel: UILabel!
 //    @IBOutlet weak var sunriseLabel: UILabel!
@@ -76,7 +83,6 @@ class WeatherDetailViewController: UIViewController {
     @IBOutlet weak var distanceLabel: UILabel!
     
     @IBOutlet var separatorLineHeightConstraints: [NSLayoutConstraint]!
-    
     
     // MARK: - ViewController Lifecycle
     
@@ -158,6 +164,33 @@ class WeatherDetailViewController: UIViewController {
             timeLabel.isHidden = true
         }
         
+        var humidChartEntry  = [ChartDataEntry]()
+        var pressureChartEntry  = [ChartDataEntry]()
+        
+        for i in 0..<humidData.count {
+            let value = ChartDataEntry(x: Double(i), y: humidData[i])
+            humidChartEntry.append(value)
+        }
+        
+        for i in 0..<pressureData.count {
+            let value = ChartDataEntry(x: Double(i), y: pressureData[i])
+            pressureChartEntry.append(value)
+        }
+        
+        let line1 = LineChartDataSet(values: humidChartEntry, label: "")
+        line1.colors = [UIColor.nearbyWeatherStandard]
+        let data = LineChartData()
+        data.addDataSet(line1)
+        humidChart.data = data
+        humidChart.chartDescription?.text = "Humidity Percent Chart"
+        
+        let line2 = LineChartDataSet(values: pressureChartEntry, label: "")
+        line2.colors = [UIColor.nearbyWeatherStandard]
+        let data2 = LineChartData()
+        data2.addDataSet(line2)
+        pressureChart.data = data2
+        pressureChart.chartDescription?.text = "Pressure Chart"
+        
         cloudCoverImageView.tintColor = .darkGray
         cloudCoverNoteLabel.text = "\(R.string.localizable.cloud_coverage()):"
         cloudCoverLabel.text = "\(weatherDTO.cloudCoverage.coverage)%"
@@ -220,10 +253,26 @@ class WeatherDetailViewController: UIViewController {
         }
         presentSafariViewController(for: url)
     }
+    
+    @IBAction func agreeButtonPressed(_ sender: UIButton) {
+        let alert = UIAlertController(title: "Climate App", message: "Your vote has been submitted to the server", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Got it", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func disagreeButtonPressed(_ sender: UIButton) {
+        let alert = UIAlertController(title: "Climate App", message: "Your vote has been submitted to the server", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Got it", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
 }
 
 extension WeatherDetailViewController: MKMapViewDelegate {
-    
+    func randomNumber(range: ClosedRange<Int> = 10...999) -> Int {
+        let min = range.lowerBound
+        let max = range.upperBound
+        return Int(arc4random_uniform(UInt32(1 + max - min))) + min
+    }
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         guard let annotation = annotation as? WeatherLocationMapAnnotation else {
             return nil
@@ -236,7 +285,9 @@ extension WeatherDetailViewController: MKMapViewDelegate {
             viewForCurrentAnnotation = WeatherLocationMapAnnotationView(frame: kMapAnnotationViewInitialFrame)
         }
         viewForCurrentAnnotation?.annotation = annotation
-        viewForCurrentAnnotation?.configure(withTitle: annotation.title ?? "<Not Set>", subtitle: annotation.subtitle ?? "<Not Set>", fillColor: (annotation.isDayTime ?? true) ? .nearbyWeatherStandard : .nearbyWeatherNight, tapHandler: nil)
+        
+        let votetitle = String(randomNumber()) + " voted"
+        viewForCurrentAnnotation?.configure(withTitle: annotation.title ?? "<Not Set>", subtitle: annotation.subtitle ?? "<Not Set>", voteTitle: votetitle, fillColor: (annotation.isDayTime ?? true) ? .nearbyWeatherStandard : .nearbyWeatherNight, tapHandler: nil)
         
         return viewForCurrentAnnotation
     }

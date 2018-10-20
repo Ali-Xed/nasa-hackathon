@@ -14,7 +14,7 @@ public let kMapAnnotationViewInitialFrame = CGRect(x: 0, y: 0, width: kWidth, he
 
 private let kMargin: CGFloat = 4
 private let kWidth: CGFloat = 110
-private let kHeight: CGFloat = 50
+private let kHeight: CGFloat = 70
 private let kTriangleHeight: CGFloat = 10
 private let kRadius: CGFloat = 10
 private let kBorderWidth: CGFloat = 4
@@ -25,6 +25,7 @@ class WeatherLocationMapAnnotationView: MKAnnotationView {
     
     private var titleLabel = UILabel()
     private var subtitleLabel = UILabel()
+    private var voteLabel = UILabel()
     
     private var title: String? {
         didSet {
@@ -38,6 +39,13 @@ class WeatherLocationMapAnnotationView: MKAnnotationView {
         }
     }
     
+
+    
+    private var voteTitle: String? {
+        didSet {
+            voteLabel.text = voteTitle
+        }
+    }
     private var fillColor: UIColor? {
         didSet {
             layer.sublayers?.forEach { ($0 as? CAShapeLayer)?.fillColor = fillColor?.cgColor }
@@ -69,10 +77,11 @@ class WeatherLocationMapAnnotationView: MKAnnotationView {
     // MARK: - Public Functions
     
     // gets called before draw
-    func configure(withTitle title: String, subtitle: String, fillColor: UIColor, tapHandler: ((UITapGestureRecognizer)->())?) {
+    func configure(withTitle title: String, subtitle: String, voteTitle: String, fillColor: UIColor, tapHandler: ((UITapGestureRecognizer)->())?) {
         self.title = title
         self.subtitle = subtitle
         self.fillColor = fillColor
+        self.voteTitle = voteTitle
         
         if let tapHandler = tapHandler {
             self.tapHandler = tapHandler
@@ -121,9 +130,17 @@ class WeatherLocationMapAnnotationView: MKAnnotationView {
         subtitleLabel = label(withFontSize: 10)
         subtitleLabel.frame.size = CGSize(width: labelWidth, height: labelHeight)
         subtitleLabel.center = CGPoint(x: frame.size.width/2, y: titleLabel.frame.size.height/2 + kMargin + titleLabel.frame.size.height)
-        subtitleLabel.frame = subtitleLabel.frame.offsetBy(dx: 0, dy: -kHeight/2)
+        subtitleLabel.frame = subtitleLabel.frame.offsetBy(dx: 0, dy: -kHeight/2 - 10)
         subtitleLabel.text = subtitle
         addSubview(subtitleLabel)
+        
+        voteLabel = label(withFontSize: 10)
+        voteLabel.textColor = UIColor.green
+        voteLabel.frame.size = CGSize(width: labelWidth, height: labelHeight)
+        voteLabel.center = CGPoint(x: frame.size.width/2, y: subtitleLabel.frame.size.height/2 + kMargin + subtitleLabel.frame.size.height)
+        voteLabel.frame = voteLabel.frame.offsetBy(dx: 0, dy: -kHeight/2 + 5)
+        voteLabel.text = voteTitle
+        addSubview(voteLabel)
         
         clipsToBounds = false
     }

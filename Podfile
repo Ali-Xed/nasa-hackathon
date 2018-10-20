@@ -13,6 +13,7 @@ def nearbyweather_pods
     pod 'APTimeZones', :git => 'https://github.com/Alterplay/APTimeZones.git', :branch => 'master', :commit => '9ffd147'
     pod 'FMDB', '~> 2.6'
     pod 'R.swift', '~> 4.0.0'
+    pod 'Charts'
 end
 
 target 'NearbyWeather' do

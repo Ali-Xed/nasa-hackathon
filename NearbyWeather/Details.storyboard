@@ -22,13 +22,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Thg-5c-26p" userLabel="ContentView">
-                                        <rect key="frame" x="0.0" y="20" width="375" height="826"/>
+                                        <rect key="frame" x="0.0" y="20" width="375" height="1200"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="tdB-46-Hza" userLabel="Container Stack View">
-                                                <rect key="frame" x="20" y="0.0" width="335" height="826"/>
+                                                <rect key="frame" x="20" y="0.0" width="335" height="1200"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="kjc-S5-7el" userLabel="Header Stack View">
-                                                        <rect key="frame" x="0.0" y="0.0" width="335" height="176.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="335" height="235.5"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rLi-aP-D67">
                                                                 <rect key="frame" x="0.0" y="0.0" width="335" height="80"/>
@@ -96,8 +96,39 @@
                                                                     <constraint firstItem="rCV-cL-X74" firstAttribute="width" secondItem="mAQ-sD-YBh" secondAttribute="width" id="Z0y-8E-Iye"/>
                                                                 </constraints>
                                                             </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tA9-YD-ghD">
+                                                                <rect key="frame" x="0.0" y="175.5" width="335" height="44"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dtJ-hc-Wxo">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="157.5" height="44"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="44" id="kqD-iI-zWv"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                                                        <state key="normal" title="Disagree"/>
+                                                                        <connections>
+                                                                            <action selector="disagreeButtonPressed:" destination="MZW-DL-HIm" eventType="touchUpInside" id="KKh-FE-hH4"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pxQ-TS-rrq">
+                                                                        <rect key="frame" x="157.5" y="0.0" width="177.5" height="44"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="44" id="YBc-xo-ipm"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                                        <state key="normal" title="Agree"/>
+                                                                        <connections>
+                                                                            <action selector="agreeButtonPressed:" destination="MZW-DL-HIm" eventType="touchUpInside" id="KKQ-3b-HRd"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="centerX" secondItem="pxQ-TS-rrq" secondAttribute="leading" constant="-10" id="5K7-9E-Ehl"/>
+                                                                    <constraint firstItem="dtJ-hc-Wxo" firstAttribute="trailing" secondItem="tA9-YD-ghD" secondAttribute="centerX" constant="-10" id="hHO-Rc-XfB"/>
+                                                                </constraints>
+                                                            </stackView>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M8v-Jv-uoX" userLabel="SeparatorLine">
-                                                                <rect key="frame" x="0.0" y="175.5" width="335" height="1"/>
+                                                                <rect key="frame" x="0.0" y="234.5" width="335" height="1"/>
                                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="1" id="EJI-P2-JFz"/>
@@ -105,36 +136,45 @@
                                                             </view>
                                                         </subviews>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Xne-Fb-LsH" userLabel="Daytime Stack View">
-                                                        <rect key="frame" x="0.0" y="191.5" width="335" height="60"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="o60-WM-0hb" userLabel="Nasa Stack View">
+                                                        <rect key="frame" x="0.0" y="250.5" width="335" height="306"/>
                                                         <subviews>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tA9-YD-ghD">
-                                                                <rect key="frame" x="0.0" y="0.0" width="335" height="44"/>
-                                                                <subviews>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pxQ-TS-rrq">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="177.5" height="44"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="height" constant="44" id="YBc-xo-ipm"/>
-                                                                        </constraints>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                                        <state key="normal" title="Agree"/>
-                                                                    </button>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dtJ-hc-Wxo">
-                                                                        <rect key="frame" x="177.5" y="0.0" width="157.5" height="44"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="height" constant="44" id="kqD-iI-zWv"/>
-                                                                        </constraints>
-                                                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
-                                                                        <state key="normal" title="Disagree"/>
-                                                                    </button>
-                                                                </subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NASA Tip: High Humidity Percent, Low Pressure more likely to rain" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WDS-Je-Zs5">
+                                                                <rect key="frame" x="0.0" y="0.0" width="335" height="36"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q5X-Yn-Gjd" userLabel="Humid Chart View" customClass="LineChartView" customModule="Charts">
+                                                                <rect key="frame" x="0.0" y="51" width="335" height="120"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="centerX" secondItem="pxQ-TS-rrq" secondAttribute="trailing" constant="10" id="5K7-9E-Ehl"/>
-                                                                    <constraint firstItem="dtJ-hc-Wxo" firstAttribute="leading" secondItem="tA9-YD-ghD" secondAttribute="centerX" constant="10" id="hHO-Rc-XfB"/>
+                                                                    <constraint firstAttribute="height" constant="120" id="XMR-e2-twt"/>
                                                                 </constraints>
-                                                            </stackView>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q8d-fH-95j" userLabel="Pressure Chart View" customClass="LineChartView" customModule="Charts">
+                                                                <rect key="frame" x="0.0" y="186" width="335" height="120"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="120" id="wCP-U7-c7J"/>
+                                                                </constraints>
+                                                            </view>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="q5X-Yn-Gjd" firstAttribute="top" secondItem="WDS-Je-Zs5" secondAttribute="bottom" constant="15" id="GOh-yw-ZlA"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Xne-Fb-LsH" userLabel="Daytime Stack View">
+                                                        <rect key="frame" x="0.0" y="571.5" width="335" height="96"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Slider" translatesAutoresizingMaskIntoConstraints="NO" id="fMb-fD-LBn">
+                                                                <rect key="frame" x="0.0" y="0.0" width="335" height="80"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="80" id="9Sb-j5-PlK"/>
+                                                                </constraints>
+                                                            </imageView>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ufr-oL-WaE" userLabel="SeparatorLine">
-                                                                <rect key="frame" x="0.0" y="59" width="335" height="1"/>
+                                                                <rect key="frame" x="0.0" y="95" width="335" height="1"/>
                                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="1" id="IbO-jj-niV"/>
@@ -143,7 +183,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="h3P-xZ-Mmq" userLabel="Weather Information Stack View">
-                                                        <rect key="frame" x="0.0" y="266.5" width="335" height="106"/>
+                                                        <rect key="frame" x="0.0" y="682.5" width="335" height="106"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zDZ-pG-n2G">
                                                                 <rect key="frame" x="0.0" y="0.0" width="335" height="20"/>
@@ -227,7 +267,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="GK1-pU-SuT" userLabel="Wind Stack View">
-                                                        <rect key="frame" x="0.0" y="387.5" width="335" height="71"/>
+                                                        <rect key="frame" x="0.0" y="803.5" width="335" height="71"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="TVo-0y-uho">
                                                                 <rect key="frame" x="0.0" y="0.0" width="335" height="20"/>
@@ -287,7 +327,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="FxE-TE-AKp" userLabel="Location Stack View">
-                                                        <rect key="frame" x="0.0" y="473.5" width="335" height="286"/>
+                                                        <rect key="frame" x="0.0" y="889.5" width="335" height="286"/>
                                                         <subviews>
                                                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" scrollEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" showsUserLocation="YES" showsBuildings="NO" showsCompass="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SHu-fg-dd5">
                                                                 <rect key="frame" x="0.0" y="0.0" width="335" height="200"/>
@@ -353,10 +393,10 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kWS-hc-9Hw">
-                                                        <rect key="frame" x="0.0" y="774.5" width="335" height="51.5"/>
+                                                        <rect key="frame" x="0.0" y="1190.5" width="335" height="9.5"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lns-TN-hI1">
-                                                                <rect key="frame" x="0.0" y="0.0" width="335" height="51.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="335" height="9.5"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </view>
                                                         </subviews>
@@ -370,7 +410,7 @@
                                             <constraint firstAttribute="bottom" secondItem="tdB-46-Hza" secondAttribute="bottom" id="kWV-ZY-SI8"/>
                                             <constraint firstItem="tdB-46-Hza" firstAttribute="leading" secondItem="Thg-5c-26p" secondAttribute="leading" constant="20" id="l3h-CM-3SW"/>
                                             <constraint firstItem="tdB-46-Hza" firstAttribute="top" secondItem="Thg-5c-26p" secondAttribute="top" id="tYq-lY-hst"/>
-                                            <constraint firstAttribute="height" constant="826" id="uB4-V4-Go8"/>
+                                            <constraint firstAttribute="height" constant="1200" id="uB4-V4-Go8" userLabel="height = 846"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -409,10 +449,12 @@
                         <outlet property="distanceLabel" destination="nlv-mf-cjo" id="pjU-gD-cF0"/>
                         <outlet property="distanceNoteLabel" destination="j67-Ch-9iS" id="pLj-2O-3hx"/>
                         <outlet property="distanceStackView" destination="bG7-KS-flf" id="hef-mf-DQd"/>
+                        <outlet property="humidChart" destination="q5X-Yn-Gjd" id="S0E-SX-k1h"/>
                         <outlet property="humidityImageView" destination="C2L-Sn-5uA" id="w8Y-5i-fUM"/>
                         <outlet property="humidityLabel" destination="IWf-AB-U9X" id="2aG-bU-gEr"/>
                         <outlet property="humidityNoteLabel" destination="tl7-vY-jP3" id="CgA-J2-LUI"/>
                         <outlet property="mapView" destination="SHu-fg-dd5" id="TgU-Tr-RcH"/>
+                        <outlet property="pressureChart" destination="q8d-fH-95j" id="fav-Bc-znt"/>
                         <outlet property="pressureImageView" destination="8Qs-Gw-dnd" id="Bjc-bL-cEA"/>
                         <outlet property="pressureLabel" destination="gYh-Xe-PqW" id="6Nd-xD-RY6"/>
                         <outlet property="pressureNoteLabel" destination="VD7-3O-0CV" id="yfZ-aA-mCC"/>
@@ -425,11 +467,11 @@
                         <outlet property="windSpeedImageView" destination="OH4-Dm-JZc" id="sIU-tK-bNt"/>
                         <outlet property="windSpeedLabel" destination="YZg-ZJ-Cni" id="UOW-Fi-rcT"/>
                         <outlet property="windSpeedNoteLabel" destination="3uz-EZ-i7H" id="Zdl-KO-77p"/>
-                        <outletCollection property="separatorLineHeightConstraints" destination="EJI-P2-JFz" collectionClass="NSMutableArray" id="GJO-jv-nra"/>
                         <outletCollection property="separatorLineHeightConstraints" destination="cu7-hM-IQF" collectionClass="NSMutableArray" id="5hQ-71-ZXg"/>
                         <outletCollection property="separatorLineHeightConstraints" destination="IbO-jj-niV" collectionClass="NSMutableArray" id="92i-E6-lRW"/>
                         <outletCollection property="separatorLineHeightConstraints" destination="XuD-Bq-t2v" collectionClass="NSMutableArray" id="rDx-fX-1WW"/>
                         <outletCollection property="separatorLineHeightConstraints" destination="UaZ-5D-Dlb" collectionClass="NSMutableArray" id="9NP-fs-1g3"/>
+                        <outletCollection property="separatorLineHeightConstraints" destination="EJI-P2-JFz" collectionClass="NSMutableArray" id="GJO-jv-nra"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zlj-gh-d9k" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -443,6 +485,7 @@
         <image name="Distance" width="37" height="37"/>
         <image name="Humidity" width="25" height="25"/>
         <image name="Location" width="25" height="25"/>
+        <image name="Slider" width="645" height="126"/>
         <image name="WindDirection" width="25" height="25"/>
         <image name="WindSpeed" width="25" height="25"/>
     </resources>
