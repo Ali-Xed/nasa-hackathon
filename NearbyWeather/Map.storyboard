@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="C3T-2d-hRa">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Nearby Locations Map View Controller-->
+        <scene sceneID="Vh5-2j-7dm">
+            <objects>
+                <viewController storyboardIdentifier="NearbyLocationsMapViewController" id="kQi-K9-35K" customClass="NearbyLocationsMapViewController" customModule="NearbyWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xk0-Rj-zxM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" pitchEnabled="NO" showsUserLocation="YES" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CiC-GD-nsA">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="CiC-GD-nsA" firstAttribute="width" secondItem="Xk0-Rj-zxM" secondAttribute="width" id="2JC-IN-sHh"/>
+                            <constraint firstItem="CiC-GD-nsA" firstAttribute="height" secondItem="Xk0-Rj-zxM" secondAttribute="height" id="EEI-Wu-rCF"/>
+                            <constraint firstItem="CiC-GD-nsA" firstAttribute="leading" secondItem="Xk0-Rj-zxM" secondAttribute="leading" id="OVq-tL-QuZ"/>
+                            <constraint firstAttribute="trailing" secondItem="CiC-GD-nsA" secondAttribute="trailing" id="fd7-Nh-f5O"/>
+                            <constraint firstItem="CiC-GD-nsA" firstAttribute="top" secondItem="Xk0-Rj-zxM" secondAttribute="top" id="r0z-gS-y0a"/>
+                            <constraint firstAttribute="bottom" secondItem="CiC-GD-nsA" secondAttribute="bottom" id="wIx-pr-6pU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ske-ID-w9t"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="P3e-Hw-rZB">
+                        <barButtonItem key="leftBarButtonItem" image="swap" id="RMB-DD-tEX">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="changeMapTypeButtonTapped:" destination="kQi-K9-35K" id="eoQ-jC-hCS"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="marker" id="Mc4-xD-6LL">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="focusLocationButtonTapped:" destination="kQi-K9-35K" id="fEg-VW-5F8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="changeMapTypeButton" destination="RMB-DD-tEX" id="f4D-M8-y73"/>
+                        <outlet property="focusLocationButton" destination="Mc4-xD-6LL" id="BOC-Lv-Bvp"/>
+                        <outlet property="mapView" destination="CiC-GD-nsA" id="BZJ-Gj-MMt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Ud-nx-8o3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3772" y="195.6521739130435"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="awU-kb-9Yx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="C3T-2d-hRa" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XPn-8O-WMw">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kQi-K9-35K" kind="relationship" relationship="rootViewController" id="ggg-kV-aHK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uQW-4c-qNf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2832.8000000000002" y="195.6521739130435"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="marker" width="25" height="25"/>
+        <image name="swap" width="25" height="25"/>
+    </resources>
+</document>

@@ -1,0 +1,23 @@
+{
+  "extends": "airbnb-base",
+  "plugins": [
+    "import"
+  ],
+  "rules": {
+    "class-methods-use-this": ["off"],
+    "comma-dangle": ["off"],
+    "indent": ["error", 2],
+    "max-len": ["off"],
+    "padded-blocks": ["off"],
+    "no-param-reassign": ["off"],
+    "no-use-before-define": ["off"],
+    "strict": ["off"],
+    "semi": ["error", "never"]
+  },
+  "env": {
+    "node": true,
+    "mocha": true,
+    "browser": false,
+    "jquery": false
+  }
+}

@@ -1,0 +1,6 @@
+framework module APTimeZones {
+  umbrella header "APTimeZones-umbrella.h"
+
+  export *
+  module * { export * }
+}

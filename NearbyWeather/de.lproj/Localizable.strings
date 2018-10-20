@@ -1,0 +1,97 @@
+/*
+ Localizable.strings
+ NearbyWeather
+ 
+ Created by Erik Maximilian Martens on 03.12.16.
+ Copyright © 2016 Erik Maximilian Martens. All rights reserved.
+ */
+
+tab_weatherList = "Liste";
+tab_weatherMap = "Karte";
+tab_settings = "Einstellungen";
+welcome = "Willkommen";
+welcome_api_key_description = "Bitte gib deinen Open Weather Map API Schlüssel ein. Du kannst ihn später in den Einstellungen verändern.";
+save = "Sichern";
+get_api_key_description = "Du hast keinen API Schlüssel?";
+location_access = "Standort-Zugriff";
+configure_location_permissions_description = "Um Wetterdaten für Städte in deiner Umgebung zu erhalten, benötigt NearbyWeather Zugriff auf deine Ortsdaten. Die App funktioniert auch ohne Zugriff auf deinen Standort. Der Funktionsumfang ist dann jedoch eingeschränkt.";
+configure = "Konfigurieren";
+no_weather_data = "Keine Wetterdaten";
+no_data_description = "Wetterdaten konnten nicht geladen werden. Gehe sicher, dass du eine Internetverbindung hast.";
+last_refresh_at = "Zuletzt aktulisiert: %@";
+unknown_error = "Beim Laden der Wetterdaten ist ein unbekannter Fehler aufgetreten. Versuche es später erneut.";
+http_error = "Beim Laden der Wetterdaten ist ein Fehler aufgetreten. Statuscode: %@";
+request_timeout_error = "Beim Laden der Wetterdaten ist ein Fehler aufgetreten. Die Anfrage wurde aufgrund einer Zeitüberschreitung abgebrochen.";
+malformed_url_error = "Beim Laden der Wetterdaten ist ein Fehler aufgetreten. Die Anfrage-URL ist ungültig.";
+unreadable_result_error = "Beim Laden der Wetterdaten ist ein Fehler aufgetreten. Die Antwort konnte nicht verarbeitet werden.";
+unauthorized_api_key_error = "Beim Laden der Wetterdaten ist ein Fehler aufgetreten. Dein OpenWeatherMap API-Schlüssel ist ungültig.";
+location_unavailable_error = "Beim Laden der Wetterdaten ist ein Fehler aufgetreten. Dein Standort konnte nicht bestimmt werden.";
+location_denied_error = "Sie haben Ihren Standort nicht freigegeben. Nahegelegene Orte konnten nicht bestimmt werden.";
+select_list_type = "Listen-Inhalt auswählen";
+select_map_type = "Karten-Typ auswählen";
+day-time = "Tag";
+night-time = "Nacht";
+sunrise = "Sonnenaufgang";
+sunset = "Sonnenuntergang";
+cloud_coverage = "Wolkenbedeckung";
+humidity = "Luftfeuchtigkeit";
+air_pressure = "Luftdruck";
+windspeed = "Windgeschwindigkeit";
+wind_direction = "Windrichtung";
+coordinates = "Koordinaten";
+distance = "Entfernung";
+map_type_standard = "Karte";
+map_type_hybrid = "Hybrid";
+map_type_satellite = "Satellit";
+about = "Über";
+resources = "Ressourcen";
+contributors = "Mitwirkende";
+libraries = "Bibliotheken";
+app_title = "NearbyWeather - Open Source Wetter";
+rate_version = "Im App Store Bewerten";
+report_issue = "Feature Vorschlagen | Bug Melden";
+project_owner = "Projekt Inhaber";
+how_to_contribute = "Entwicklung Unterstützen";
+source_code_via_github = "Quellcode via GitHub";
+general = "Allgemein";
+openWeatherMap_api = "OpenWeatherMap API";
+bookmarks = "Gespeicherte Orte";
+preferences = "Präferenzen";
+refresh_on_app_start = "Beim App Start Aktualisieren";
+amount_of_results = "Anzahl der Ergebnisse";
+sorting_orientation = "Sortier-Reihenfolge";
+temperature_unit = "Temperatur-Einheit";
+distance-speed_unit = "Distanz-/Geschwindigkeits-Einheit";
+add_location = "Ort Hinzufügen";
+manage_locations = "Orte Verwalten";
+x_locations = "%d Orte";
+api_settings = "API Einstellen";
+enter_api_key = "Gib deinen API Schlüssel ein";
+api_key_length_description = "Der API Schlüssel hat eine Länge von genau 32 Zeichen.";
+manage_locations = "Orte Verwalten";
+add_location = "Ort Hinzufügen";
+search_by_name = "Suche nach Namen";
+focus_on_location = "Ort Zentrieren";
+icons = "Icons";
+bookmarked = "Gespeicher";
+nearby = "In der Nähe";
+apiKey = "API Schlüssel";
+sortByName = "Nach Namen";
+sortByTemperature = "Nach Temperatur";
+sortByDistance = "Nach Distanz";
+metric = "Metrisch";
+imperial = "Zöllig";
+results = "Ergebnisse";
+cancel = "Abbrechen";
+reload = "Aktualisieren";
+viaEmail = "Email";
+viaGitHub = "GitHub";
+kilometres_per_hour = "Kilometer/Stunde";
+miles_per_hour = "Meilen/Stunde";
+kilometres = "Kilometer";
+miles = "Meilen";
+kph = "km/h";
+mph = "m/h";
+km = "km";
+mi = "mi";
+current_location = "Standort";

@@ -1,0 +1,6 @@
+framework module TextFieldCounter {
+  umbrella header "TextFieldCounter-umbrella.h"
+
+  export *
+  module * { export * }
+}

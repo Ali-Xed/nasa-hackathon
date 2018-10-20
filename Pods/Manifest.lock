@@ -1,0 +1,62 @@
+PODS:
+  - Alamofire (4.7.3)
+  - APTimeZones (1.1)
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
+  - PKHUD (5.2.0)
+  - R.swift (4.0.0):
+    - R.swift.Library (~> 4.0.0)
+  - R.swift.Library (4.0.0)
+  - RainyRefreshControl (0.4.0)
+  - TextFieldCounter (1.0.2)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.6)
+  - APTimeZones (from `https://github.com/Alterplay/APTimeZones.git`, commit `9ffd147`, branch `master`)
+  - FMDB (~> 2.6)
+  - PKHUD (~> 5.0)
+  - R.swift (~> 4.0.0)
+  - RainyRefreshControl (~> 0.4)
+  - TextFieldCounter (from `https://github.com/serralvo/TextFieldCounter.git`, commit `4a746ad`, branch `master`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - FMDB
+    - PKHUD
+    - R.swift
+    - R.swift.Library
+    - RainyRefreshControl
+
+EXTERNAL SOURCES:
+  APTimeZones:
+    :branch: master
+    :commit: 9ffd147
+    :git: https://github.com/Alterplay/APTimeZones.git
+  TextFieldCounter:
+    :branch: master
+    :commit: 4a746ad
+    :git: https://github.com/serralvo/TextFieldCounter.git
+
+CHECKOUT OPTIONS:
+  APTimeZones:
+    :commit: 9ffd1473e76fdf15e9a78d39b9e3f8dfad0b0255
+    :git: https://github.com/Alterplay/APTimeZones.git
+  TextFieldCounter:
+    :commit: c5909a8c2f040b9d7ead0eefb5b8203d002d0cf5
+    :git: https://github.com/serralvo/TextFieldCounter.git
+
+SPEC CHECKSUMS:
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  APTimeZones: ddb9aca50fff41d6313eb29d86d37b1edf9d2942
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  PKHUD: dd5357ac65f26115c35c4a68e9b328053326c5fe
+  R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
+  R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
+  RainyRefreshControl: de2236ad2f46d6cfb22bf029e0067b48cdcb2925
+  TextFieldCounter: b2abbcc1181fe7d5194acb2a0fb6becee841c6e0
+
+PODFILE CHECKSUM: bfed900760c0276be8514b35eb1a854bc0de8905
+
+COCOAPODS: 1.5.3

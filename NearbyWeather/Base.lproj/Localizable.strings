@@ -1,0 +1,97 @@
+/*
+ Localizable.strings
+ NearbyWeather
+ 
+ Created by Erik Maximilian Martens on 03.12.16.
+ Copyright © 2016 Erik Maximilian Martens. All rights reserved.
+ */
+
+tab_weatherList = "List";
+tab_weatherMap = "Map";
+tab_settings = "Settings";
+welcome = "Welcome";
+welcome_api_key_description = "Please enter your Open Weather Map API key below. You can change this within the settings later.";
+save = "Save";
+get_api_key_description = "Don't have an API key?";
+location_access = "Location Access";
+configure_location_permissions_description = "In order to get weather data for nearby places, NearbyWeather requires access to your current location. You may use NearbyWeather without disclosing your coordinates, although this limits the app's functionality.";
+configure = "Configure";
+no_weather_data = "No Weather Data";
+no_data_description = "Weather data could not be loaded. Make sure you are connected to the Internet.";
+last_refresh_at = "Last Refresh: %@";
+unknown_error = "An unknown error occured while downloading weather data. Please try again later.";
+http_error = "An http error occurred while downloading weather data. Status code: %@";
+request_timeout_error = "An error occurred while downloading weather data. The request timed out.";
+malformed_url_error = "An error occurred while downloading weather data. The request-URL was malformed.";
+unreadable_result_error = "An error occurred while downloading weather data. The response could not be parsed.";
+unauthorized_api_key_error = "An error occurred while downloading weather data. Your OpenWeatherMap API key is invalid.";
+location_unavailable_error = "An error occurred while downloading weather data. Your location could not be determined.";
+location_denied_error = "You have disabled access to your current location. Nearby locations cannot be determined.";
+select_list_type = "Select list content";
+select_map_type = "Select map type";
+day-time = "Day-Time";
+night-time = "Night-Time";
+sunrise = "Sunrise";
+sunset = "Sunset";
+cloud_coverage = "Cloud Coverage";
+humidity = "Humidity";
+air_pressure = "Pressure";
+windspeed = "Wind Speed";
+wind_direction = "Wind Direction";
+coordinates = "Coordinates";
+distance = "Distance";
+map_type_standard = "Map";
+map_type_hybrid = "Hybrid";
+map_type_satellite = "Satellite";
+about = "About";
+resources = "Resources";
+contributors = "Contributors";
+libraries = "Libraries";
+app_title = "NearbyWeather - Open Source Weather";
+rate_version = "Rate this Version";
+report_issue = "Suggest a Feature | Report a Bug";
+project_owner = "Project Owner";
+how_to_contribute = "How to Contribute";
+source_code_via_github = "Source Code via GitHub";
+general = "General";
+openWeatherMap_api = "OpenWeatherMap API";
+bookmarks = "Bookmarks";
+preferences = "Preferences";
+refresh_on_app_start = "Refresh on App Start";
+amount_of_results = "Amount of Results";
+sorting_orientation = "Sorting Orientation";
+temperature_unit = "Temperature Unit";
+distance-speed_unit = "Distance/Speed Unit";
+add_location = "Add a Location";
+manage_locations = "Manage Locations";
+x_locations = "%d Locations";
+api_settings = "Set API Key";
+enter_api_key = "Enter API Key";
+api_key_length_description = "The API Key has a length of exactly 32 characters.";
+manage_locations = "Manage Locations";
+add_location = "Add Location";
+search_by_name = "Search by Name";
+focus_on_location = "Focus on Location";
+icons = "Icons";
+bookmarked = "Bookmarked";
+nearby = "Nearby";
+apiKey = "API Key";
+sortByName = "By Name";
+sortByTemperature = "By Temperature";
+sortByDistance = "By Distance";
+metric = "Metric";
+imperial = "Imperial";
+results = "Results";
+cancel = "Cancel";
+reload = "Reload";
+viaEmail = "Mail";
+viaGitHub = "GitHub";
+kilometres_per_hour = "Kilometres per Hour";
+miles_per_hour = "Miles per Hour";
+kilometres = "Kilometres";
+miles = "Miles";
+kph = "km/h";
+mph = "mp/h";
+km = "km";
+mi = "mi";
+current_location = "Current Location";

@@ -1,0 +1,9 @@
+/*
+ InfoPlist.strings
+ NearbyWeather
+ 
+ Created by Erik Maximilian Martens on 03.12.16.
+ Copyright © 2016 Erik Maximilian Martens. All rights reserved.
+ */
+
+NSLocationWhenInUseUsageDescription = "NearbyWeather is using your location, in order to determine nearby cities and deliver weather information based on this data.";
