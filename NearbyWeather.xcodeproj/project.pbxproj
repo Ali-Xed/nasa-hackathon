@@ -891,6 +891,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 20E2DFB16875223CFBEA36EF /* Pods-NearbyWeather.debug.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = X8C2YN746J;
 				INFOPLIST_FILE = NearbyWeather/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -906,6 +908,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2DB36716201A47922EC83643 /* Pods-NearbyWeather.release.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = X8C2YN746J;
 				INFOPLIST_FILE = NearbyWeather/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
