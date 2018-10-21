@@ -37,7 +37,14 @@ class WeatherDetailViewController: UIViewController {
         viewController.weatherDTO = weatherDTO
         return viewController
     }
-    
+    func UIColorFromRGB(rgbValue: UInt) -> UIColor {
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
+    }
     
     // MARK: - Properties
     
@@ -151,19 +158,19 @@ class WeatherDetailViewController: UIViewController {
         separatorLineHeightConstraints.forEach { $0.constant = 1/UIScreen.main.scale }
         
         agreeBtn.setTitle("AGREE", for: .normal)
-        agreeBtn.setTitleColor(.nearbyWeatherStandard, for: .normal)
-        agreeBtn.setTitleColor(.nearbyWeatherStandard, for: .highlighted)
+        agreeBtn.setTitleColor(UIColorFromRGB(rgbValue: 0x22AA99), for: .normal)
+        agreeBtn.setTitleColor(UIColorFromRGB(rgbValue: 0x22AA99), for: .highlighted)
         agreeBtn.setTitleColor(.lightGray, for: .disabled)
         agreeBtn.layer.cornerRadius = 5.0
-        agreeBtn.layer.borderColor = UIColor.nearbyWeatherStandard.cgColor
+        agreeBtn.layer.borderColor = UIColorFromRGB(rgbValue: 0x22AA99).cgColor
         agreeBtn.layer.borderWidth = 1.0
         
         disagreeBtn.setTitle("DISAGREE", for: .normal)
-        disagreeBtn.setTitleColor(.nearbyWeatherStandard, for: .normal)
-        disagreeBtn.setTitleColor(.nearbyWeatherStandard, for: .highlighted)
+        disagreeBtn.setTitleColor(UIColorFromRGB(rgbValue: 0xEE4444), for: .normal)
+        disagreeBtn.setTitleColor(UIColorFromRGB(rgbValue: 0xEE4444), for: .highlighted)
         disagreeBtn.setTitleColor(.lightGray, for: .disabled)
         disagreeBtn.layer.cornerRadius = 5.0
-        disagreeBtn.layer.borderColor = UIColor.nearbyWeatherStandard.cgColor
+        disagreeBtn.layer.borderColor = UIColorFromRGB(rgbValue: 0xEE4444).cgColor
         disagreeBtn.layer.borderWidth = 1.0
         
         let weatherCode = weatherDTO.weatherCondition[0].identifier
