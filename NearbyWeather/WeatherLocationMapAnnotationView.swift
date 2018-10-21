@@ -9,7 +9,7 @@
 import Foundation
 import MapKit
 
-public let kMapAnnotationViewIdentifier = "de.erikmaximilianmartens.nearbyWeather.WeatherLocationMapAnnotationView"
+public let kMapAnnotationViewIdentifier = "com.maxchen666.climateapp.WeatherLocationMapAnnotationView"
 public let kMapAnnotationViewInitialFrame = CGRect(x: 0, y: 0, width: kWidth, height: kHeight)
 
 private let kMargin: CGFloat = 4

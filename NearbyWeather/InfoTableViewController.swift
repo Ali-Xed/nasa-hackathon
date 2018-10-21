@@ -22,7 +22,7 @@ class InfoTableViewController: UITableViewController {
                                                     CocoaPodMeta(name: "TextFieldCounter", urlString: "https://github.com/serralvo/TextFieldCounter")]
     
     struct Contributor { var name: String; var subtitle: String }
-    private static let contributors: [Contributor] = [Contributor(name: "Erik Maximilian Martens", subtitle: R.string.localizable.project_owner())]
+    private static let contributors: [Contributor] = [Contributor(name: "Max@ClimateApp", subtitle: R.string.localizable.project_owner())]
     
     //MARK: - Assets
     
@@ -69,13 +69,13 @@ class InfoTableViewController: UITableViewController {
             return
         }
         if indexPath.section == 1 && indexPath.row == 0 {
-            urlStringValue = "http://www.erikmartens.de/contact.html"
+            urlStringValue = "http://www.maxchen666.com/contact.html"
         }
         if indexPath.section == 2 && indexPath.row == 0 {
-            urlStringValue = "https://github.com/erikmartens/NearbyWeather/blob/master/CONTRIBUTING.md"
+            urlStringValue = "https://github.com/maxchen666/ClimateApp/blob/master/CONTRIBUTING.md"
         }
         if indexPath.section == 2 && indexPath.row == 1 {
-            urlStringValue = "https://github.com/erikmartens/NearbyWeather"
+            urlStringValue = "https://github.com/maxchen666/ClimateApp"
         }
         if indexPath.section == 3 {
             urlStringValue = InfoTableViewController.cocoaPods[indexPath.row].urlString
@@ -152,7 +152,7 @@ class InfoTableViewController: UITableViewController {
                                      leftButtonTitle: R.string.localizable.viaGitHub(),
                                      rightButtonTitle: R.string.localizable.viaEmail(),
                                      leftButtonHandler: { [unowned self] button in
-                                        guard let url = URL(string: "https://github.com/erikmartens/NearbyWeather/issues") else {
+                                        guard let url = URL(string: "https://github.com/maxchen666/ClimateApp/issues") else {
                                             return
                                         }
                                         DispatchQueue.main.async {
@@ -160,9 +160,9 @@ class InfoTableViewController: UITableViewController {
                                         }
                 },
                                      rightButtonHandler: { [unowned self] button in
-                                        let mailAddress = "erikmartens.developer@gmail.com"
-                                        let subject = "NearbyWeather - \(R.string.localizable.report_issue())"
-                                        let message = "Hey Erik, \n"
+                                        let mailAddress = "MaxChenNew@gmail.com"
+                                        let subject = "ClimateApp - \(R.string.localizable.report_issue())"
+                                        let message = "Hey Max, \n"
                                         self.sendMail(to: [mailAddress], withSubject: subject, withMessage: message)
                 })
                 return buttonCell

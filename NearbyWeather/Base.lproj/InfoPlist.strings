@@ -6,4 +6,4 @@
  Copyright © 2016 Erik Maximilian Martens. All rights reserved.
  */
 
-NSLocationWhenInUseUsageDescription = "NearbyWeather is using your location, in order to determine nearby cities and deliver weather information based on this data.";
+NSLocationWhenInUseUsageDescription = "ClimateApp is using your location, in order to determine nearby cities and deliver weather information based on this data.";

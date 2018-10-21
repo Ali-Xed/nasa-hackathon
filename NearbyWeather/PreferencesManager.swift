@@ -257,7 +257,7 @@ class PreferencesManager {
     }
     
     private static func storeService() {
-        let preferencesManagerBackgroundQueue = DispatchQueue(label: "de.erikmaximilianmartens.nearbyWeather.preferencesManagerBackgroundQueue", qos: .utility, attributes: [DispatchQueue.Attributes.concurrent], autoreleaseFrequency: .inherit, target: nil)
+        let preferencesManagerBackgroundQueue = DispatchQueue(label: "com.maxchen666.climateapp.preferencesManagerBackgroundQueue", qos: .utility, attributes: [DispatchQueue.Attributes.concurrent], autoreleaseFrequency: .inherit, target: nil)
         
         let dispatchSemaphore = DispatchSemaphore(value: 1)
         

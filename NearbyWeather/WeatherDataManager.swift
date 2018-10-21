@@ -104,7 +104,7 @@ class WeatherDataManager {
     }
     
     public func update(withCompletionHandler completionHandler: (() -> ())?) {
-        let fetchWeatherDataBackgroundQueue = DispatchQueue(label: "de.erikmaximilianmartens.nearbyWeather.fetchWeatherDataQueue", qos: .userInitiated, attributes: [.concurrent], autoreleaseFrequency: .inherit, target: nil)
+        let fetchWeatherDataBackgroundQueue = DispatchQueue(label: "com.maxchen666.climateapp.fetchWeatherDataQueue", qos: .userInitiated, attributes: [.concurrent], autoreleaseFrequency: .inherit, target: nil)
         
         guard NetworkingService.shared.reachabilityStatus == .connected else {
             completionHandler?()
@@ -241,7 +241,7 @@ class WeatherDataManager {
     }
     
     private static func storeService() {
-        let weatherServiceBackgroundQueue = DispatchQueue(label: "de.erikmaximilianmartens.nearbyWeather.weatherDataManagerBackgroundQueue", qos: .utility, attributes: [DispatchQueue.Attributes.concurrent], autoreleaseFrequency: .inherit, target: nil)
+        let weatherServiceBackgroundQueue = DispatchQueue(label: "com.maxchen666.climateapp.weatherDataManagerBackgroundQueue", qos: .utility, attributes: [DispatchQueue.Attributes.concurrent], autoreleaseFrequency: .inherit, target: nil)
         
         let dispatchSemaphore = DispatchSemaphore(value: 1)
         

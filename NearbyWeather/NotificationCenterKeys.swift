@@ -8,7 +8,7 @@
 
 import Foundation
 
-let kWeatherServiceDidUpdate = "de.erikmaximilianmartens.nearbyWeather.weatherServiceDidUpdate"
-let kLocationAuthorizationUpdated = "de.erikmaximilianmartens.nearbyWeather.locationAuthorizationUpdated"
-let kNetworkReachabilityChanged = "de.erikmaximilianmartens.nearbyWeather.networkReachabilityChanged"
-let kSortingOrientationPreferenceChanged = "de.erikmaximilianmartens.nearbyWeather.sortingOrientationPreferenceChanged"
+let kWeatherServiceDidUpdate = "com.maxchen666.climateapp.weatherServiceDidUpdate"
+let kLocationAuthorizationUpdated = "com.maxchen666.climateapp.locationAuthorizationUpdated"
+let kNetworkReachabilityChanged = "com.maxchen666.climateapp.networkReachabilityChanged"
+let kSortingOrientationPreferenceChanged = "com.maxchen666.climateapp.sortingOrientationPreferenceChanged"

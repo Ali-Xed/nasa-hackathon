@@ -6,4 +6,4 @@
  Copyright © 2016 Erik Maximilian Martens. All rights reserved.
  */
 
-NSLocationWhenInUseUsageDescription = "NearbyWeather nutzt Ihren Standort, um Wetterdaten für Städte in Ihrem Umkreis abzurufen und anzuzeigen.";
+NSLocationWhenInUseUsageDescription = "ClimateApp nutzt Ihren Standort, um Wetterdaten für Städte in Ihrem Umkreis abzurufen und anzuzeigen.";

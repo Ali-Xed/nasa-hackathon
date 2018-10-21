@@ -10,5 +10,5 @@ import Foundation
 
 let kNearbyWeatherApiKeyKey = "nearby_weather.openWeatherMapApiKey"
 let kIsInitialLaunch = "nearby_weather.isInitialLaunch"
-let kRefreshOnAppStartKey = "de.erikmaximilianmartens.nearbyWeather.refreshOnAppStart"
-let kWeatherDataLastRefreshDateKey = "de.erikmaximilianmartens.nearbyWeather.weatherDataService.lastUpdateDate"
+let kRefreshOnAppStartKey = "com.maxchen666.climateapp.refreshOnAppStart"
+let kWeatherDataLastRefreshDateKey = "com.maxchen666.climateapp.weatherDataService.lastUpdateDate"
