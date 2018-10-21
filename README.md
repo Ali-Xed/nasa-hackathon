@@ -1,17 +1,12 @@
 <p align="center">
-<img src="Resources/app_icon.png" alt="NearbyWeather for iOS" height="128" width="128">
+<img src="Resources/app_icon.png" alt="ClimateApp for iOS" height="128" width="128">
 </p>
 
-<h1 align="center">NearbyWeather - Open Source Weather</h1>
+<h1 align="center">ClimateApp</h1>
 
 <p align="center">
 <a href="https://developer.apple.com/swift/"><img src="https://img.shields.io/badge/Swift-4.1-orange.svg?style=flat" alt="Swift"/></a>
 <img src="https://img.shields.io/badge/Platform-iOS%209.0+-lightgrey.svg" alt="Platform: iOS">
-<img src="https://img.shields.io/github/license/erikmartens/NearbyWeather.svg?style=flat" alt="License: MIT">
-<a href="https://twitter.com/erik_martens"><img src="https://img.shields.io/badge/Twitter-@erik_martens-blue.svg" alt="Twitter: @erik_martens"/></a>
-</p>
-<p align="center">
-<a href="https://itunes.apple.com/app/nearbyweather/id1227313069"><img src="Resources/app_store_badge.svg" alt="Download on the App Store"/></a>
 </p>
 
 |List View|Map View|Detail View|
@@ -20,9 +15,9 @@
 </p>
 
 ## About the App
-NearbyWeather is a simple weather app, that provides current weather information for nearby cities, as well for bookmarked locations. NearbyWeather uses the OpenWeatherMap api to download weather data. Additionally the OpenWeatherMaps location database is directly bootstrapped into the app for quick access.
+ClimateApp is a simple weather app, that provides current weather information for nearby cities, as well for bookmarked locations. ClimateApp uses the OpenWeatherMap api to download weather data. Additionally the OpenWeatherMaps location database is directly bootstrapped into the app for quick access.
 
-With NearbyWeather you can:
+With ClimateApp you can:
 - See current weather information for bookmarked and nearby places via a list and a map view
 - Detailed weather information is offered in addition to the overviews
 - Add places as bookmarks via OpenWeatherMaps weather-station data base
@@ -34,7 +29,7 @@ With NearbyWeather you can:
 > Downloading data for a bookmarked location counts as one request. Downloading bulk data for nearby places also counts as a single request, regardless of the amount of results you choose. You can add bookmarks indefinitely, but for example exceeding the 60 requests limit with a free tier api key may result in a failure to download data (this scenario has not been tested and depends of the tier of your api key).
 
 ## Goals of this Project
-NearbyWeather should help you as a reference for your iOS development. Whether you just started iOS development or want to learn more about Swift by seeing in action, this project is here for your guidance. Idealy you already have gained some experience or got your feet wet with mobile development. NearbyWeather is created to teach basic principles of iOS development, including but not limited to:
+ClimateApp should help you as a reference for your iOS development. Whether you just started iOS development or want to learn more about Swift by seeing in action, this project is here for your guidance. Idealy you already have gained some experience or got your feet wet with mobile development. ClimateApp is created to teach basic principles of iOS development, including but not limited to:
 - Accessing and using the user's location
 - Persisiting data
 - Network requests
@@ -54,10 +49,3 @@ It therefore otherwise refrains from advanced concepts. The architecture is kept
 ## Support and Open Source
 Support is provided at the given support link, including instructions to get started with the app. The app's source code is open source. You can download and contribute via GitHub. To learn more about the project, visit the support website.
 
-## Future Developments
-- [Release 2.1](https://github.com/erikmartens/NearbyWeather/projects/2)
-- [Release 2.2](https://github.com/erikmartens/NearbyWeather/projects/1)
-- Integrate [Fastlane](https://fastlane.tools)
-- Integrate XCTests and [Travis](https://travis-ci.org)
-- Integrate [Fabric](https://get.fabric.io)
-- Integrate [Swift Lint](https://github.com/realm/SwiftLint)
