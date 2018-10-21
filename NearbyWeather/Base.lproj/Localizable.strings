@@ -1,11 +1,3 @@
-/*
- Localizable.strings
- NearbyWeather
- 
- Created by Erik Maximilian Martens on 03.12.16.
- Copyright © 2016 Erik Maximilian Martens. All rights reserved.
- */
-
 tab_weatherList = "List";
 tab_weatherMap = "Map";
 tab_settings = "Settings";

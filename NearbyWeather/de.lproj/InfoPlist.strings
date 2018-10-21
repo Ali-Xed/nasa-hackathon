@@ -1,9 +1,3 @@
-/*
- InfoPlist.strings
- NearbyWeather
- 
- Created by Erik Maximilian Martens on 03.12.16.
- Copyright © 2016 Erik Maximilian Martens. All rights reserved.
- */
+
 
 NSLocationWhenInUseUsageDescription = "ClimateApp nutzt Ihren Standort, um Wetterdaten für Städte in Ihrem Umkreis abzurufen und anzuzeigen.";
