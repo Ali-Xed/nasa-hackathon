@@ -11,7 +11,7 @@
 
 |Map View|Detail View|
 |:---:|:---:|
-![](https://imgur.com/a/Mb0W94Q) | ![](https://imgur.com/a/Xye69J6)
+![](https://imgur.com/JqF7xYn) | ![](https://imgur.com/z0TzMjg)
 </p>
 
 ## About the App
