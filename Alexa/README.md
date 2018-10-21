@@ -8,9 +8,9 @@ The skill currently has two intents:
 - [GetTemperature](#gettemperature)
 - [GetAvailableCities](#getavailablecities)
 
-![Sample1](https://github.com/Ali-Rahimian/nasa-hackathon/raw/master/Alexa/screenshots/Sample1.png "Sample1")
-![Sample2](https://github.com/Ali-Rahimian/nasa-hackathon/raw/master/Alexa/screenshots/Sample2.png "Sample2")
-![Sample3](https://github.com/Ali-Rahimian/nasa-hackathon/raw/master/Alexa/screenshots/Sample3.png "Sample3")
+| | | |
+| ------------- |:-------------:| -----:|
+| ![Sample1](https://github.com/Ali-Rahimian/nasa-hackathon/raw/master/Alexa/screenshots/Sample1.png "Sample1") | ![Sample2](https://github.com/Ali-Rahimian/nasa-hackathon/raw/master/Alexa/screenshots/Sample2.png "Sample2") | ![Sample3](https://github.com/Ali-Rahimian/nasa-hackathon/raw/master/Alexa/screenshots/Sample3.png "Sample3") |
 
 ### GetTemperature
 
