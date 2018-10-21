@@ -9,8 +9,8 @@
 <img src="https://img.shields.io/badge/Platform-iOS%209.0+-lightgrey.svg" alt="Platform: iOS">
 </p>
 
-|List View|Map View|Detail View|
-|:---:|:---:|:---:|
+|Map View|Detail View|
+|:---:|:---:|
 ![](https://imgur.com/a/Mb0W94Q) | ![](https://imgur.com/a/Xye69J6)
 </p>
 
