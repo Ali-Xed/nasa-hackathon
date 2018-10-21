@@ -1,4 +1,4 @@
-# Climates Alexa
+# Cli-Mates Alexa
 
 Using NASA's data to provide historical weather information.
 
