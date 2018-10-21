@@ -1,0 +1,29 @@
+service: climates-alexa
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+  stage: dev
+  profile: aaaaaaa
+  region: us-east-1
+  iamRoleStatements:
+    - Effect: "Allow"
+      Action:
+       - dynamodb:Query
+       - dynamodb:Scan
+       - dynamodb:GetItem
+       - dynamodb:PutItem
+       - dynamodb:UpdateItem
+       - dynamodb:DeleteItem
+      Resource: "arn:aws:dynamodb:us-east-1:999999999999:table/*"
+
+package:
+  exclude:
+    - data
+    - bin
+
+functions:
+  hello:
+    handler: handler.handler
+    events:
+      - alexaSkill: amzn1.ask.skill.[SKILL_ID]
