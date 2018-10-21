@@ -14,6 +14,8 @@ def nearbyweather_pods
     pod 'FMDB', '~> 2.6'
     pod 'R.swift', '~> 4.0.0'
     pod 'Charts'
+    pod 'Firebase/Core'
+    pod 'Firebase/Database'
 end
 
 target 'NearbyWeather' do
