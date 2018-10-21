@@ -1,5 +1,6 @@
 
 import UIKit
+import Firebase
 import Charts
 import MapKit
 import SafariServices
@@ -23,6 +24,7 @@ extension UIImage {
 }
 
 class WeatherDetailViewController: UIViewController {
+    var ref: DatabaseReference!
     
     static func instantiateFromStoryBoard(withTitle title: String, weatherDTO: WeatherInformationDTO) -> WeatherDetailViewController {
         let viewController = UIStoryboard(name: "Details", bundle: .main).instantiateViewController(withIdentifier: "WeatherDetailViewController") as! WeatherDetailViewController
