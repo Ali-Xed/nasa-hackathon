@@ -9,7 +9,6 @@ const config = require('../config');
 const AWS = require('aws-sdk');
 // Set the region
 AWS.config.update({ region: 'us-east-1' });
-AWS.config.credentials = new AWS.SharedIniFileCredentials({ profile: 'uxplace' });
 const ddb = new AWS.DynamoDB();
 
 const DEFAULT_BATCH_SIZE = 25;

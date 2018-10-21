@@ -75,3 +75,5 @@ node_modules/
 
 ## R.Swift
 *.generated.swift
+
+.idea
