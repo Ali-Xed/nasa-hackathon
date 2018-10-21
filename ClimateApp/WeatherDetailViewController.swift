@@ -108,6 +108,18 @@ class WeatherDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        ref = Database.database().reference()
+        //ref.child("reports").child("3sNoDwYadN9QJImKtyW8").setValue(["up": 1])
+        //ref.child("reports").child("3sNoDwYadN9QJImKtyW8").setValue(["down": 1])
+        //ref.child("reports/testing").setValue(["up": 0, "down": 0])
+//        ref.child("reports").setValue(["up": 1]) {
+//            (error:Error?, ref:DatabaseReference) in
+//            if let error = error {
+//                print("Data could not be saved: \(error).")
+//            } else {
+//                print("Data saved successfully!")
+//            }
+//        }
         navigationItem.title = titleString
         
         var facebookImage    = UIImage(named: "Facebook")!
@@ -306,15 +318,54 @@ class WeatherDetailViewController: UIViewController {
     }
     
     @IBAction func agreeButtonPressed(_ sender: UIButton) {
-        let alert = UIAlertController(title: "Climate App", message: "Your vote has been submitted to the server", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Got it", style: .default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+        var upVal = 0
+        var downVal = 0
+        ref.child("reports/testing").observeSingleEvent(of: .value, with: { (snapshot) in
+            // Get user value
+            let value = snapshot.value as? NSDictionary
+            upVal = value?["up"] as? Int ?? 0
+            downVal = value?["down"] as? Int ?? 0
+            upVal = upVal + 1
+            self.ref.child("reports/testing").setValue(["up": upVal, "down": downVal]){
+                (error:Error?, ref:DatabaseReference) in
+                if let error = error {
+                    print("Data could not be saved: \(error).")
+                } else {
+                    print("Data saved successfully!")
+                    let alert = UIAlertController(title: "Climate App", message: "Vote Result: Agree-" + String(upVal) + " Disagree-" + String(downVal), preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Got it", style: .default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                }
+            }
+        }) { (error) in
+            print(error.localizedDescription)
+        }
     }
     
     @IBAction func disagreeButtonPressed(_ sender: UIButton) {
-        let alert = UIAlertController(title: "Climate App", message: "Your vote has been submitted to the server", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Got it", style: .default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+        
+        var upVal = 0
+        var downVal = 0
+        ref.child("reports/testing").observeSingleEvent(of: .value, with: { (snapshot) in
+            // Get user value
+            let value = snapshot.value as? NSDictionary
+            upVal = value?["up"] as? Int ?? 0
+            downVal = value?["down"] as? Int ?? 0
+            downVal = downVal + 1
+            self.ref.child("reports/testing").setValue(["up": upVal, "down": downVal]){
+                (error:Error?, ref:DatabaseReference) in
+                if let error = error {
+                    print("Data could not be saved: \(error).")
+                } else {
+                    let alert = UIAlertController(title: "Climate App", message: "Vote Result: Agree-" + String(upVal) + " Disagree-" + String(downVal), preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Got it", style: .default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                }
+            }
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+        
     }
 }
 
